@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %} {{object.title}} | {{block.super}} {% endblock %}
+{% block content %}
+
+    <h1>{{object.description}}</h1>
+    <label for="completed"> Completed </label>
+    {% if object.completed %}
+        <input id="completed" type="checkbox" checked value="Completed">
+        {% else %}
+        <input id="completed" type="checkbox"  value="Completed">
+
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<!--<a href="{% url 'task_list'%}">Back to list </a>-->
+<ul>
+{% for object in object_list %}
+    <li id="{{ object.id }}"><a href="{% url 'task_detail' id=object.id %}">{{ object.title }}</a></li>
+{% endfor %}
+</ul>
+
+{% endblock %}
